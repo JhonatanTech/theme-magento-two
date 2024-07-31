@@ -1,10 +1,11 @@
 //Icons
-@font-face {
-    font-family: 'Material Symbols Outlined';
-    font-style: normal;
-    src:    url(../fonts/GoogleFontsIcons/MaterialSymbolsRounded.tff) format('tff'),
-            url(../fonts/GoogleFontsIcons/MaterialSymbolsRounded.woff2) format('woff2');
-}
+.lib-font-face(
+    @family-name: 'Material Symbols Outlined',
+    @font-path: '@{baseDir}fonts/GoogleFontsIcons/MaterialSymbolsRounded',
+    @font-weight: 400,
+    @font-style: normal,
+    @font-display: swap
+);
 
 .material-symbols-outlined {
     font-family: 'Material Symbols Outlined';
@@ -20,15 +21,14 @@
     direction: ltr;
 }
 
-//Font Roboto
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    src: url(../fonts/Roboto/Roboto-Medium.tff) format('tff');
-}
+//Font Nunito
+.lib-font-face(
+    @family-name: 'Nunito',
+    @font-path: '@{baseDir}fonts/Nunito/static/Nunito',
+    @font-style: normal,
+    @font-display: swap
+);
 
-*{
-    font-family: 'Roboto', sans-serif;
-    font-weight: normal;
-    font-style: normal;
+body {
+    font-family: 'Nunito';
 }
