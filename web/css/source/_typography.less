@@ -1,9 +1,11 @@
 //Icons
-.lib-font-face(@family-name: 'Material Symbols Outlined',
-    @font-path: '@{baseDir}fonts/GoogleFontsIcons/MaterialSymbolsRounded',
-    @font-weight: 400,
-    @font-style: normal,
-    @font-display: swap);
+@font-face {
+    font-family: 'Material Symbols Rounded';
+    src:    url('@{baseDir}fonts/GoogleFontsIcons/MaterialSymbolsRounded.woff2') format('woff2'),
+            url('@{baseDir}fonts/GoogleFontsIcons/MaterialSymbolsRounded.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .icon {
     font-family: 'Material Symbols Outlined';
