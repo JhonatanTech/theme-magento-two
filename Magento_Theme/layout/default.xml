@@ -4,11 +4,18 @@
     <body>
         <referenceBlock name="logo">
             <arguments>
-                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                <argument name="logo_file" xsi:type="string">images/logo.svg</argument>
                 <argument name="logo_width" xsi:type="number">300</argument>
                 <argument name="logo_height" xsi:type="number">300</argument>
                 <argument name="logo_alt" xsi:type="string">Logo name</argument>
             </arguments>
         </referenceBlock>
+
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Theme\Block\Html\Header\Logo" name="logo" template="Magento_Theme::html/header/logo.phtml" before="top.search"/>
+            <container name="header.panel" htmlTag="div" htmlClass="panel header" after="top.search"></container>
+            <block class="Magento\Checkout\Block\Cart\Sidebar" name="minicart" template="Magento_Checkout::cart/minicart.phtml" after="header.panel"/>
+            <block class="Magento\Framework\View\Element\Template" name="contact.info" template="Magento_Theme::html/contact-info.phtml"  before="minicart"/>
+        </referenceContainer>
     </body>
 </page>

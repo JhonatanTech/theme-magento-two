@@ -1,0 +1,19 @@
+<?php
+$topLinks = $block->getLinks();
+?>
+
+<div class="custom-link">
+    <span class="icon">person</span>
+    <p><strong>Cadastre-se</strong><br>
+        ou faça seu login</p>
+
+    <ul class="custom-top-links">
+        <?php foreach ($topLinks as $link): ?>
+            <li class="top-link-item">
+                <a href="<?php echo $link->getUrl(); ?>" title="<?php echo $link->getLabel(); ?>">
+                    <?php echo $link->getLabel(); ?>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>

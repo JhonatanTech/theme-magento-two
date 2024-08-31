@@ -1,0 +1,181 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common =true) {
+
+    //
+    //  Top Links
+    //  ---------------------------------------------
+    .custom-link {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+
+        .icon {
+            display: flex;
+            flex-direction: column;
+            font-size: 40px;
+            color: #F0A316;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 700;
+            margin: 0;
+
+            strong {
+                color: #F0A316;
+            }
+        }
+
+        .custom-top-links {
+            display: none;
+        }
+
+        &:hover {
+            .custom-top-links {
+                position: absolute;
+                display: block;
+                width: 200px;
+                top: 38px;
+                background-color: #F0A316;
+                padding: 15px 20px 10px 20px;
+                border: 2px solid #000;
+                border-radius: 10px;
+                z-index: 99;
+
+                li {
+                    list-style: none;
+                    margin: 5px 0;
+
+                    a {
+                        color: #fff;
+                        font-size: 16px;
+                        text-decoration: none;
+                    }
+
+                    &:hover {
+                        a {
+                            font-weight: bold;
+                            background-color: #c88201;
+                            padding: 0 5px;
+                            border-radius: 3px;
+                        }
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    top: -7px;
+                    left: 10px;
+                    transform: rotateZ(45deg);
+                    background-color: #F0A316;
+                    border-top: solid 2px #000;
+                    border-left: solid 2px #000;
+                }
+            }
+        }
+    }
+
+    //
+    //  Contact Info
+    //  ---------------------------------------------
+    .contact-info{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+
+        .icon {
+            font-size: 40px;
+            color: #F0A316;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 700;
+            margin: 0;
+
+            strong {
+                color: #F0A316;
+            }
+        }
+
+        .list-contacts {
+            display: none;
+        }
+
+        &:hover {
+            .list-contacts {
+                position: absolute;
+                display: block;
+                width: 285px;
+                top: 38px;
+                background-color: #F0A316;
+                padding: 15px 20px 10px 20px;
+                border: 2px solid #000;
+                border-radius: 10px;
+                z-index: 99;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    list-style: none;
+                    margin: 5px 0;
+
+                    .icon{
+                        font-size: 24px;
+                        color: #fff;
+                        margin-right: 10px;
+                    }
+
+                    .info {
+                        color: #fff;
+                        font-size: 16px;
+                        text-decoration: none;
+                    }
+
+                    &:hover {
+                        a {
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    top: -7px;
+                    left: 10px;
+                    transform: rotateZ(45deg);
+                    background-color: #F0A316;
+                    border-top: solid 2px #000;
+                    border-left: solid 2px #000;
+                }
+            }
+        }
+    }
+
+    .minicart-wrapper {
+        margin: 0 !important;
+
+        .showcart {
+            &::before {
+                content: 'shopping_cart' !important;
+                font-family: 'Material Symbols Rounded' !important;
+                font-size: 38px !important;
+                color: #F0A316 !important;
+            }
+        }
+
+    }
+}
