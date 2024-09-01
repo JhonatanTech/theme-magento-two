@@ -11,6 +11,10 @@
             </arguments>
         </referenceBlock>
 
+        <referenceContainer name="header.container">
+            <block class="Magento\Framework\View\Element\Template" name="benefits.bar" template="Magento_Theme::html/benefits.phtml" before="-"/>
+        </referenceContainer>
+
         <referenceContainer name="header-wrapper">
             <block class="Magento\Theme\Block\Html\Header\Logo" name="logo" template="Magento_Theme::html/header/logo.phtml" before="top.search"/>
             <container name="header.panel" htmlTag="div" htmlClass="panel header" after="top.search"></container>
